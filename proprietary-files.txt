@@ -730,6 +730,9 @@ vendor/lib/libqmiservices.so
 vendor/lib/libqmi.so
 vendor/lib/libsmemlog.so
 
+# Qti-telephony-common
+framework/qti-telephony-common.jar
+
 # RIL
 -app/datastatusnotification/datastatusnotification.apk
 -app/embms/embms.apk
@@ -805,3 +808,5 @@ vendor/lib/libqvop-service.so
 
 # WiFi
 bin/cnss-daemon
+
+
