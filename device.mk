@@ -73,6 +73,10 @@ TARGET_SCREEN_WIDTH := 1080
 # Haters gonna hate..
 PRODUCT_CHARACTERISTICS := nosdcard
 
+# Bluetooth
+#PRODUCT_PACKAGES += \
+#libbthost_if
+
 # Audio
 PRODUCT_PACKAGES += \
     audiod \
@@ -113,10 +117,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml
-
-# Camera
-PRODUCT_PACKAGES += \
-    Snap
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
@@ -237,6 +237,21 @@ PRODUCT_PACKAGES += \
 # QMI
 PRODUCT_PACKAGES += \
     libjson
+
+# Camera
+PRODUCT_PACKAGES += \
+    MiuiCamera
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/camera/camera_config.xml:system/etc/camera/camera_config.xml \
+    $(LOCAL_PATH)/configs/camera/imx268_chromatix.xml:system/etc/camera/imx268_chromatix.xml \
+    $(LOCAL_PATH)/configs/camera/imx386_semco_chromatix.xml:system/etc/camera/imx386_semco_chromatix.xml \
+    $(LOCAL_PATH)/configs/camera/s5k3m3_semco_chromatix.xml:system/etc/camera/s5k3m3_semco_chromatix.xml \
+    $(LOCAL_PATH)/configs/camera/sagit_imx268_liteon_chromatix.xml:system/etc/camera/sagit_imx268_liteon_chromatix.xml
+
+# Prebuilt
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,device/xiaomi/sagit/prebuilt/system,system)
 
 # Ramdisk
 PRODUCT_PACKAGES += \
