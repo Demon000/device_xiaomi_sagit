@@ -144,6 +144,7 @@ BOARD_HARDWARE_CLASS += \
     $(DEVICE_PATH)/cmhw
 BOARD_USES_CYANOGEN_HARDWARE := true
 TARGET_TAP_TO_WAKE_NODE :=  "/proc/touchpanel/double_tap_enable"
+TARGET_TAP_TO_WAKE_NODE :=  "/sys/devices/soc/c179000.i2c/i2c-5/5-0020/input/input1/wake_gesture"
 
 # CNE and DPM
 BOARD_USES_QCNE := true

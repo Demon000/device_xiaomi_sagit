@@ -411,6 +411,15 @@ on post-fs-data
     mkdir /data/misc/qdmastats 0700 system system
     mkdir /data/misc/qdma 0770 system system
 
+    # dt2w node
+    chown system system /proc/touchpanel
+    chown system system /sys/devices/soc/c179000.i2c/i2c-5/5-0020/input/input1/0dbutton
+    chown system system /sys/devices/soc/c179000.i2c/i2c-5/5-0020/input/input1/wake_gesture
+    chown system system /sys/devices/soc/c179000.i2c/i2c-5/5-0020/input/input1/reversed_keys_enable
+    chmod 0660 /sys/devices/soc/c179000.i2c/i2c-5/5-0020/input/input1/0dbutton
+    chmod 0660 /sys/devices/soc/c179000.i2c/i2c-5/5-0020/input/input1/wake_gesture
+    chmod 0660 /sys/devices/soc/c179000.i2c/i2c-5/5-0020/input/input1/reversed_keys_enable
+
 service perfd /system/vendor/bin/perfd
    class main
    user root
