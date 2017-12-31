@@ -722,8 +722,10 @@ etc/data/netmgr_config.xml
 etc/modem/Diag.cfg
 etc/permissions/embms.xml
 etc/permissions/qcrilhook.xml
+etc/permissions/qti_telephony_common.xml|6c6ebceb595ad55acf3472e5366a7f4e7abffe96
 framework/embmslibrary.jar
 -framework/qcrilhook.jar
+-framework/qti-telephony-common.jar|c3139808f1047b8c29cfb83d074822f76e0056ec
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/qti
 vendor/lib64/libconfigdb.so
